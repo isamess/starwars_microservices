@@ -9,7 +9,7 @@ server.use(express.json());
 server.use("/planets", require("./routes"))  //server utiliza lo que venga de routes
 
 server.use("*", (req, res)=>{
-    res.status(404).send("Not found"); //o podemos poner otro cientError(404)
+    res.status(404).send("Not found"); //o podemos poner otro clientError(404)
 });
 
 server.use((err, req, res, next)=>{
